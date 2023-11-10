@@ -1,87 +1,65 @@
-/*
-SU SINTAXTIS 
-
-SELECTOR{
-        PROPIEDAD:VALOR
-    N....N
-    
-*/
-
-/* estilos.css */
-
-/* Modificadores de texto */
-@import url('https://fonts.googleapis.com/css2?family=Rubik:ital@1&display=swap');
-body {
-    font-family: 'Arial', sans-serif;
-    color: #333;
-    margin: 0;
-    padding: 0;
-    background-color: #ffffff;
+.card:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s;
+    cursor: pointer;
 }
 
-header {
-    background-color: #71aaa7;
-    padding: 10px;
-    overflow: auto;
-}
+.card {
+    position: relative;
+    overflow: hidden;
+  }
 
-header a {
-    float: left;
-}
-
-header nav ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    text-align: right;
-}
-
-header nav li {
-    display: inline-block;
-    margin-left: 20px;
-}
-
-header nav a {
-    text-decoration: none;
-    color: #fff;
-    font-weight: bold;
-}
-
-main {
-    padding: 20px;
-}
-
-footer {
-    background-color: #4ecdc4;
-    padding: 10px;
-    text-align: center;
-    position: fixed;
-    bottom: 0;
+  .card img {
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.7; 
+  }
+
+  .card-body {
+    position: relative;
+    z-index: 1;
+  }
+
+  .card-title,
+  .card-text {
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); 
+  }
+  .texto-contacto {
+    color: #0f0f0e;
+} 
+
+.carousel-item img {
+    max-height: 300px; /* establece la altura máxima */
+    width: 100%; /* asegura que la imagen se expanda para llenar el contenedor */
+    object-fit: cover; /* mantiene la relación y cubre completamente el contenedor */
+    margin: auto;
 }
 
-footer ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
+.carousel-caption h5,
+.carousel-caption p {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Ajusta los valores según tu preferencia */
 }
 
-footer li {
-    display: inline-block;
-    margin: 0 10px;
+.servicios-section .card {
+    height: 100%; /*  todas las tarjetas tienen la misma altura */
+    background-color: rgba(0, 0, 0, 0.1); /* fondo negro difuminado */
+    color: white; /* texto blanco */
+    border: none; /* saca el borde de las tarjetas */
 }
 
-footer a {
-    text-decoration: none;
-    color: #fff;
-    font-weight: bold;
-    }
+.servicios-section .card-title {
+    color: #ffffff; /* Cambia el color del título de la tarjeta (azul en este caso) */
+}
 
-    .colorParrafo1 {
-        background-color: rgb(181, 169, 169) }
-     .colorParrafo2 {
-            background-color: rgb(181, 169, 169) }
-    p
-    {
-        font-family: 'Rubik', sans-serif;
-        font-size: 1rem;}
+.servicios-section .card-text, .card-title, .btn {
+    margin-bottom: 0.5rem; /* Ajusta el espacio entre los elementos de la tarjeta */
+}
+.custom-btn {
+    margin-bottom: auto;
+}
+
